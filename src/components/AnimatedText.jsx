@@ -1,7 +1,9 @@
 import React from 'react'
 import { motion } from 'framer-motion'
 
-const AnimatedText = ({ text, className, delay = 0, duration = 0.5, stagger = 0, staggerWithIndex = false, effect = 'None', direction, directionValue = 100, blurValue = 10, rotationValue = -5, scaleValue = 1.2 }) => {
+const AnimatedText = ({ children, text, className, delay = 0, duration = 0.5, stagger = 0, staggerWithIndex = false, effect = 'None', direction, directionValue = 100, blurValue = 10, rotationValue = -5, scaleValue = 1.2 }) => {
+
+    const content = children ? (typeof children === 'string' ? children : React.Children.toArray(children).join('')) : text;
 
     // All Errors
     if (staggerWithIndex === true && stagger === 0) {
@@ -70,7 +72,7 @@ const AnimatedText = ({ text, className, delay = 0, duration = 0.5, stagger = 0,
                     className={`text-zinc-100 knight-warrior-font ${className}`}
                 >
                     {
-                        text.split('').map((char, index) => {
+                        content.split('').map((char, index) => {
                             const displayChar = char === ' ' ? '\u00A0' : char;
                             return (
                                 <div key={index} className='relative inline-block' style={{ overflow: 'visible', lineHeight: 1.2 }}>

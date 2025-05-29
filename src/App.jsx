@@ -1,5 +1,5 @@
 import React from 'react'
-import AnimatedText from './components/SmokeFadeText'
+import AnimatedText from './components/AnimatedText'
 
 const App = () => {
 
