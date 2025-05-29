@@ -2,7 +2,7 @@ import React, { useRef, useState } from 'react'
 import { motion, useScroll, useMotionValueEvent } from 'framer-motion'
 import { useEffect } from 'react';
 
-const Menu = () => {
+const HighlightedMenuTop = () => {
 
     const containerRef = useRef(null);
     const lastY = useRef(0);
@@ -137,4 +137,4 @@ const Menu = () => {
     )
 }
 
-export default Menu
+export default HighlightedMenuTop
