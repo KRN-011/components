@@ -1,11 +1,11 @@
 import React from 'react'
-import AnimatedText from './components/AnimatedText'
+import HoverVeriticalAnimateText from './components/HoverVeriticalAnimateText'
 
 const App = () => {
 
   return (
     <div className='w-screen min-h-screen'>
-      <AnimatedText text='A B C D E F G H I J K L M N' className='text-9xl' delay={0.7} effect='RotationScale' staggerWithIndex stagger={0.03} rotationValue={10} scaleValue={1.2} />
+      <HoverVeriticalAnimateText className='text-9xl text-zinc-100 knight-warrior-font'>Hello World</HoverVeriticalAnimateText>
     </div>
   )
 }

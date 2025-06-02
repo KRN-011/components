@@ -67,9 +67,9 @@ const AnimatedText = ({ children, text, className, delay = 0, duration = 0.5, st
 
     return (
         <div className='w-full h-screen'>
-            <div className='w-full h-full flex items-center justify-center bg-zinc-900'>
+            <div className='w-full h-full flex items-center justify-center'>
                 <h1 
-                    className={`text-zinc-100 knight-warrior-font ${className}`}
+                    className={`${className}`}
                 >
                     {
                         content.split('').map((char, index) => {
